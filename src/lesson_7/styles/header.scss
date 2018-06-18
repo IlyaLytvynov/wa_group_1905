@@ -1,0 +1,68 @@
+@import './variables.scss';
+@import './mixins';
+
+$navbar-height: 58px;
+$page-nav-item-margin: 36px;
+$page-nav-link-color: #ffffff;
+$logo-font-size: 26px;
+
+.page-header {
+  background-color: $background-dark;
+  @include mobile {
+    background-color: green;
+  }
+  @include tablet {
+    background-color: yellow;
+  }
+}
+
+.page-nav {
+  height: $navbar-height;
+  display: flex;
+  justify-content: space-between;
+  @include pageContainer;
+  &__logo {
+    color: $page-nav-link-color;
+    font-size: $logo-font-size;
+    font-weight: normal;
+    @include flexCenterVertical;
+  }
+  &__toggle {
+    display: none;
+  }
+  &__menu {
+    display: flex;
+    justify-content: center;
+  }
+  &__item {
+    margin: 0 $page-nav-item-margin;
+    display: flex;
+  }
+  &__link {
+    color: $page-nav-link-color;
+    @include flexCenterVertical;
+    justify-content: center;
+  }
+}
+
+.account-panel {
+  display: flex;
+  align-items: center;
+  &__btn {
+    margin: 0
+  }
+}
+
+.baner {
+  display: flex;
+  justify-content: space-between;
+  @include pageContainer;
+  &__img {
+    width: 463px;
+    height: 792px;
+    background-image: url('../../assets/images/artboard@2x.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}

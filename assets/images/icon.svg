@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="34px" viewBox="0 0 40 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="1440" height="920"></rect>
+        <rect id="path-3" x="0" y="0" width="1257" height="420" rx="10"></rect>
+        <filter x="-4.5%" y="-11.0%" width="108.9%" height="126.7%" filterUnits="objectBoundingBox" id="filter-4">
+            <feOffset dx="0" dy="10" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="17" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.823554422   0 0 0 0 0.823554422   0 0 0 0 0.823554422  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-187.000000, -895.000000)">
+            <g id="Header">
+                <g id="Artboard">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Mask" fill="#313A5A" xlink:href="#path-1"></use>
+                </g>
+            </g>
+            <g id="Benefit" transform="translate(92.000000, 810.000000)">
+                <g id="Rectangle">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-3"></use>
+                </g>
+                <rect id="Rectangle" fill="#1FDB84" opacity="0.100000001" x="79" y="66" width="72" height="72" rx="6"></rect>
+                <path d="M123,101.2 L126.91904,101.2 C126.494506,104.997146 123.177887,107.801442 119.363002,107.588846 C115.548117,107.376249 112.563622,104.220804 112.563622,100.4 C112.563622,96.5791955 115.548117,93.4237505 119.363002,93.2111543 C123.177887,92.998558 126.494506,95.802854 126.91904,99.6 L123,99.6 C122.558172,99.6 122.2,99.9581722 122.2,100.4 C122.2,100.841828 122.558172,101.2 123,101.2 Z M135,87.6 L135,113.2 C135,114.525483 133.925483,115.6 132.6,115.6 L131.8,115.6 L131.8,117.2 C131.8,118.083656 131.083656,118.8 130.2,118.8 L127,118.8 C126.116344,118.8 125.4,118.083656 125.4,117.2 L125.4,115.6 L104.6,115.6 L104.6,117.2 C104.6,118.083656 103.883656,118.8 103,118.8 L99.8,118.8 C98.9163444,118.8 98.2,118.083656 98.2,117.2 L98.2,115.6 L97.4,115.6 C96.0745166,115.6 95,114.525483 95,113.2 L95,87.6 C95,86.2745166 96.0745166,85.2 97.4,85.2 L132.6,85.2 C133.925483,85.2 135,86.2745166 135,87.6 Z M103,115.6 L99.8,115.6 L99.8,117.2 L103,117.2 L103,115.6 Z M103,90.8 C103,90.3581722 102.641828,90 102.2,90 C101.758172,90 101.4,90.3581722 101.4,90.8 L101.4,93.2 L100.6,93.2 C100.158172,93.2 99.8,93.5581722 99.8,94 C99.8,94.4418278 100.158172,94.8 100.6,94.8 L101.4,94.8 L101.4,99.6 L100.6,99.6 C100.158172,99.6 99.8,99.9581722 99.8,100.4 C99.8,100.841828 100.158172,101.2 100.6,101.2 L101.4,101.2 L101.4,106 L100.6,106 C100.158172,106 99.8,106.358172 99.8,106.8 C99.8,107.241828 100.158172,107.6 100.6,107.6 L101.4,107.6 L101.4,110 C101.4,110.441828 101.758172,110.8 102.2,110.8 C102.641828,110.8 103,110.441828 103,110 L103,90.8 Z M128.6,100.4 C128.6,95.5398942 124.660106,91.6 119.8,91.6 C114.939894,91.6 111,95.5398942 111,100.4 C111,105.260106 114.939894,109.2 119.8,109.2 C124.660106,109.2 128.6,105.260106 128.6,100.4 Z M130.2,115.6 L127,115.6 L127,117.2 L130.2,117.2 L130.2,115.6 Z" id="Shape" fill="#1FDB84" fill-rule="nonzero"></path>
+            </g>
+        </g>
+    </g>
+</svg>

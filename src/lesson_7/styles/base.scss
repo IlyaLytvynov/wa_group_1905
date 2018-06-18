@@ -1,0 +1,23 @@
+@import './variables';
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: $base-font-size;
+  font-family: sans-serif;
+}
+
+body, ul, ol, h1, h2, h3, h4, h5, hr, p, figure {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
