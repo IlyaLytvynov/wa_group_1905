@@ -1,0 +1,10 @@
+.notification-bar {
+  &__message {
+    display: none;
+  }
+  &_active {
+    .notification-bar__message {
+      display: block;
+    }
+  }
+}
