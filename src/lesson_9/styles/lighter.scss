@@ -1,0 +1,31 @@
+.street-lighter {
+  display: flex;
+  width: 60px;
+  margin: 0 auto;
+  box-shadow: 0 3px 3px 0 rgba(0,0,0,.4);
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  &__light {
+    width: 50px;
+    height: 50px;
+    border: 1px solid red;
+    border-radius: 50%;
+    &_red {
+      &.street-lighter__light_active {
+        background-color: red;
+      }
+
+    }
+    &_yellow {
+      &.street-lighter__light_active {
+        background-color: yellow;
+      }
+    }
+    &_green {
+      &.street-lighter__light_active {
+        background-color: green;
+      }
+    }
+  }
+}
