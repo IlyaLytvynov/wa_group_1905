@@ -25,3 +25,35 @@ function notificationBar() {
 }
 
 notificationBar();
+
+const products = [
+  {
+    title: 'TEst',
+    price: '2500dfghjhgf'
+  },
+  {
+    title: 'TEst',
+    price: '2500'
+  },
+  {
+    title: 'TEst',
+    price: '2500'
+  },
+];
+
+function calcTotal(arrayOfNumbers) {
+  let total = 0;
+
+  for (let i = 0; i < arrayOfNumbers.length; i++) {
+    const number = Number(arrayOfNumbers[i].price);
+
+    if(isNaN(number) === false) {
+      total += number
+    }
+  }
+
+  return total;
+}
+
+const totalPrice = calcTotal(products);
+console.log(totalPrice);
