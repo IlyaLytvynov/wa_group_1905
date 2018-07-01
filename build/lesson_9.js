@@ -60,66 +60,141 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 333);
+/******/ 	return __webpack_require__(__webpack_require__.s = 336);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 333:
+/***/ 336:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(334);
+module.exports = __webpack_require__(337);
 
 
 /***/ }),
 
-/***/ 334:
+/***/ 337:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(335);
+__webpack_require__(338);
 
-// let userName = 'Ilya';
-// let userAge = 26;
-// let userAddress = 'dasdasd asdasdasd asdasd';
-// let userPhoneNumber = '+83635289103';
-//
-// let user = {
-//   name: 'Ilya',
-//   age: 26,
-//   address: 'dasdasd asdasdasd asdasd',
-//   phoneNumber: '+83635289103',
-// };
-//
-var product = {
-  price: 'fdjhgafsjhdga',
-  title: 'Iphone 7',
-  imagUrl: 'http://ws3.com/image12.jpg'
-};
-//
-//
-var product2 = {
-  Iphone: '200',
-  macBook: '2000',
-  s9: '1000'
-};
+var _lighter = __webpack_require__(339);
 
-// const name = prompt('Enter your name ', '');
+var lighterElement = document.querySelector('#lighter1');
+var lighterElement2 = document.querySelector('#lighter2');
+var lighterElement3 = document.querySelector('#lighter3');
 
-for (var i = 0; i < name.length; i = i + 2) {
-  console.log(name[i]);
+(0, _lighter.lighter)(lighterElement);
+(0, _lighter.lighter)(lighterElement2);
+(0, _lighter.lighter)(lighterElement3);
+
+function notificationBar() {
+
+  var notificationBarElement = document.querySelector('.notification-bar');
+  var control = document.querySelector('.notification-bar__btn');
+
+  console.log(control);
+  console.log(notificationBarElement);
+
+  function toggleMessage() {
+    notificationBarElement.classList.toggle('notification-bar_active');
+  }
+
+  control.addEventListener('click', toggleMessage);
 }
 
-for (var key in product2) {
-  console.log('KEY: ' + key);
-  console.log('VALUE: ' + product2[key]);
+notificationBar();
+
+var products = [{
+  title: 'TEst',
+  price: '2500dfghjhgf'
+}, {
+  title: 'TEst',
+  price: '2500'
+}, {
+  title: 'TEst',
+  price: '2500'
+}];
+
+function calcTotal(arrayOfNumbers) {
+  var total = 0;
+
+  for (var i = 0; i < arrayOfNumbers.length; i++) {
+    var number = Number(arrayOfNumbers[i].price);
+
+    if (isNaN(number) === false) {
+      total += number;
+    }
+  }
+
+  return total;
 }
+
+var totalPrice = calcTotal(products);
+console.log(totalPrice);
 
 /***/ }),
 
-/***/ 335:
+/***/ 338:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 339:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.lighter = lighter;
+
+__webpack_require__(340);
+
+function lighter(lighterElement) {
+  var lights = lighterElement.querySelectorAll('.street-lighter__light');
+
+  function switchOff() {
+    for (var i = 0; i < lights.length; i++) {
+      var light = lights[i];
+      light.classList.remove('street-lighter__light_active');
+    }
+  }
+
+  function switchOn(element) {
+    console.log('ENABLED');
+    element.classList.add('street-lighter__light_active');
+  }
+
+  function clickHandler(element) {
+    switchOff();
+    switchOn(element);
+  }
+
+  var _loop = function _loop(i) {
+    var light = lights[i];
+    light.addEventListener('click', function () {
+      clickHandler(light);
+    });
+  };
+
+  for (var i = 0; i < lights.length; i++) {
+    _loop(i);
+  }
+}
+
+function isEmpty(obj) {}
+
+/***/ }),
+
+/***/ 340:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

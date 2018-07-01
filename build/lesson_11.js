@@ -60,69 +60,116 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 333);
+/******/ 	return __webpack_require__(__webpack_require__.s = 341);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 333:
+/***/ 341:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(334);
+module.exports = __webpack_require__(342);
 
 
 /***/ }),
 
-/***/ 334:
+/***/ 342:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(335);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-// let userName = 'Ilya';
-// let userAge = 26;
-// let userAddress = 'dasdasd asdasdasd asdasd';
-// let userPhoneNumber = '+83635289103';
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function test() {
+  console.log('Test');
+}
+
+function greeting() {
+  console.log(this);
+  console.log('Hello my name is, ' + this.name);
+}
+
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
+  this.greet = greeting;
+}
+
+function Developer(name, age, lang) {
+  Person.call(this, name, age);
+  this.lang = lang;
+  this.develop = function () {
+    console.log('Written code at ' + this.lang);
+  };
+}
+
+function extend() {}
+
+// function Car() {
+//   this.fuel = 100;
+// }
 //
-// let user = {
-//   name: 'Ilya',
-//   age: 26,
-//   address: 'dasdasd asdasdasd asdasd',
-//   phoneNumber: '+83635289103',
+// Car.prototype.move = function () {
+//   console.log('GO Not FAST!!!');
+//   console.log('Fuel consumed', this.fuel -= 40);
 // };
 //
-var product = {
-  price: 'fdjhgafsjhdga',
-  title: 'Iphone 7',
-  imagUrl: 'http://ws3.com/image12.jpg'
-};
-//
-//
-var product2 = {
-  Iphone: '200',
-  macBook: '2000',
-  s9: '1000'
-};
+// Car.prototype.test = function () {
+//   console.log('Fuel consumed', this.fuel -= 40);
+// };
 
-// const name = prompt('Enter your name ', '');
+var Car = function () {
+  function Car() {
+    _classCallCheck(this, Car);
 
-for (var i = 0; i < name.length; i = i + 2) {
-  console.log(name[i]);
+    this.fuel = 100;
+  }
+
+  _createClass(Car, [{
+    key: 'move',
+    value: function move() {
+      console.log('GO Not FAST!!!');
+      console.log('Fuel consumed', this.fuel -= 40);
+    }
+  }, {
+    key: 'test',
+    value: function test() {
+      console.log('Fuel consumed', this.fuel -= 40);
+    }
+  }]);
+
+  return Car;
+}();
+
+function SportCar() {
+  Car.call(this);
 }
 
-for (var key in product2) {
-  console.log('KEY: ' + key);
-  console.log('VALUE: ' + product2[key]);
+SportCar.prototype = Object.create(Car.prototype);
+
+SportCar.prototype.move = function () {
+  console.log('GO FAST!!!');
+  console.log('Fuel consumed', this.fuel -= 40);
+};
+
+/**
+ * @param car Car
+ * */
+function Driver(car) {
+  this.car = car;
+  this.drive = function () {
+    this.car.move();
+  };
 }
 
-/***/ }),
-
-/***/ 335:
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
+var ferrari = new SportCar();
+var matiz = new Car();
+var someDrive = new Driver(matiz);
+debugger;
+someDrive.drive();
 
 /***/ })
 

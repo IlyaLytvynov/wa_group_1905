@@ -5,7 +5,7 @@ html {
   font-size: 16px;
   font-family: sans-serif; }
 
-body, ul, ol, h1, h2, h3, h4, h5, hr, p {
+body, ul, ol, h1, h2, h3, h4, h5, hr, p, figure {
   padding: 0;
   margin: 0; }
 
@@ -17,6 +17,12 @@ li {
 
 .page-header {
   background-color: #313a5a; }
+  @media (max-width: 719.9px) {
+    .page-header {
+      background-color: green; } }
+  @media (max-width: 979.9px) {
+    .page-header {
+      background-color: yellow; } }
 
 .page-nav {
   height: 58px;
@@ -67,7 +73,10 @@ li {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: justify;
-      justify-content: space-between; }
+      justify-content: space-between;
+  max-width: 1257px;
+  margin: 0 auto;
+  padding: 0 16px; }
   .baner__img {
     width: 463px;
     height: 792px;
@@ -87,3 +96,6 @@ li {
   .btn_success {
     background-color: #1fdb84;
     box-shadow: 0 8px 34px 0 rgba(31, 219, 132, 0.6); }
+  .btn_large {
+    padding: 25px 50px;
+    font-size: 40px; }

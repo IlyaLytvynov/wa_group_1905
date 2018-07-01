@@ -1,52 +1,97 @@
-function test() {
-  console.log('Test');
-}
+import { Lighter } from './components/lighter/lighter';
 
-function greeting () {
-  console.log(this);
-  console.log('Hello my name is, ' + this.name);
-}
+const firstLighter = new Lighter(document.querySelector('#lighter1'));
 
-function Person(name, age) {
-  this.name = name;
-  this.age = age;
-  this.greet = greeting;
-}
+class LighterManager {
+  constructor(button, arrayOfLighters) {
+    this.button = button;
+    this.lighters = arrayOfLighters;
 
-function Developer(name, age, lang) {
-  this.name = name;
-  this.age = age;
-  this.lang = lang;
-  this.greet = greeting;
-  this.develop = function () {
-    console.log('Written code at ' + this.lang);
+    this.button.addEventListener('click', () => {
+      console.log(this.lighters[0].isEnabled);
+    })
   }
 }
 
-const person = new Person('John', 30);
-const person2 = new Person('Jack', 20);
-const js = new Developer('Jack', 20, 'JS');
-const dotNetDev = new Developer('Vasyl', 20, 'c#');
-const javaDev = new Developer('John', 20, 'Java');
+const u = new LighterManager(document.querySelector('button'), [firstLighter]);
 
-person.greet();
-person2.greet();
-dotNetDev.develop();
-js.develop();
-javaDev.develop();
-debugger;
-console.log(Object.keys(person));
-
-
-
-// function counter() {
-//   const btn = document.querySelector('#btn');
-//   let clickCounter = 0;
-//
-//   btn.addEventListener('click', () => {
-//     clickCounter++;
-//     console.log(clickCounter);
-//   })
+// function test() {
+//   console.log('Test');
 // }
 //
-// counter();
+// function greeting() {
+//   console.log(this);
+//   console.log('Hello my name is, ' + this.name);
+// }
+//
+// function Person(name, age) {
+//   this.name = name;
+//   this.age = age;
+//   this.greet = greeting;
+// }
+//
+// function Developer(name, age, lang) {
+//   Person.call(this, name, age);
+//   this.lang = lang;
+//   this.develop = function () {
+//     console.log('Written code at ' + this.lang);
+//   }
+// }
+//
+// function extend() {
+// }
+
+// function Car() {
+//   this.fuel = 100;
+// }
+//
+// Car.prototype.move = function () {
+//   console.log('GO Not FAST!!!');
+//   console.log('Fuel consumed', this.fuel -= 40);
+// };
+//
+// Car.prototype.test = function () {
+//   console.log('Fuel consumed', this.fuel -= 40);
+// };
+
+// class Car {
+//   constructor() {
+//     this.fuel = 100;
+//   }
+//
+//   move() {
+//     console.log('GO Not FAST!!!');
+//     console.log('Fuel consumed', this.fuel -= 40);
+//   }
+//
+//   test() {
+//     console.log('Fuel consumed', this.fuel -= 40);
+//   }
+// }
+//
+// function SportCar() {
+//   Car.call(this);
+// }
+//
+// SportCar.prototype = Object.create(Car.prototype);
+//
+// SportCar.prototype.move = function () {
+//   console.log('GO FAST!!!');
+//   console.log('Fuel consumed', this.fuel -= 40);
+// };
+//
+// /**
+//  * @param car Car
+//  * */
+// function Driver(car) {
+//   this.car = car;
+//   this.drive = function () {
+//     this.car.move();
+//   }
+// }
+//
+// const ferrari = new SportCar();
+// const matiz = new Car();
+// const someDrive = new Driver(matiz);
+// debugger;
+// someDrive.drive();
