@@ -7,7 +7,6 @@ class Lighter {
   constructor(targetElement) {
     this.targetElement = targetElement;
     this.lights = this.targetElement.querySelectorAll('.' + LIGHTER_LIGHT_CLASS_NAME);
-    this.isEnabled = false;
     this.attachEvents();
   }
 
@@ -21,17 +20,19 @@ class Lighter {
 
   switchOnLight(element) {
     element.classList.add(LIGHTER_LIGHT_ACTIVE_CLASS_NAME);
-    this.isEnabled = true;
-    console.log(this.isEnabled);
   }
 
   attachEvents() {
-    this.lights.forEach(light => {
+    this.lights.forEach((light) => {
       light.addEventListener('click', () => {
         this.switchOffLights();
         this.switchOnLight(light);
       });
     });
+  }
+
+  togglefirst() {
+    this.switchOnLight(this.lights[0]);
   }
 }
 
