@@ -1,0 +1,18 @@
+.bulb {
+  width: 50px;
+  &__lighter {
+    border: 1px solid red;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  &_active {
+    background-color: green;
+    .bulb__lighter {
+      background-color: red;
+    }
+    .bulb__control  {
+      background-color: yellow;
+    }
+  }
+}
