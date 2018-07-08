@@ -3,10 +3,8 @@ import './bulb.scss';
 export class Bulb {
   constructor(targetEl) {
     this.target = targetEl;
-    this.control = targetEl.querySelector('.bulb__control');
-    this.lighter = targetEl.querySelector('.bulb__lighter');
     this.isEnabled = false;
-    console.log(this);
+    this.render();
     this.control.addEventListener('click', () => this.toggle());
   }
 
@@ -26,5 +24,19 @@ export class Bulb {
     } else {
       this.switchOn();
     }
+  }
+
+  render() {
+    this.control = document.createElement('button');
+    this.lighter = document.createElement('div');
+
+    this.control.classList.add('bulb__control');
+    this.lighter.classList.add('bulb__lighter');
+
+    this.control.textContent = 'Toggle';
+
+    this.target.appendChild(this.lighter);
+    this.target.appendChild(this.control);
+    this.target.classList.add('bulb');
   }
 }
